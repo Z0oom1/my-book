@@ -1,0 +1,168 @@
+/* Estilo Global */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 30vh;
+}
+
+/* Container Principal */
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 1200px;
+    height: 100vh;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    overflow: hidden;
+}
+
+/* Cabeçalho */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    border-bottom: 1px solid #ddd;
+    background-color: hsl(0, 0%, 18%);
+    color: #fff;
+    position: relative;
+}
+
+header input {
+    font-size: 24px;
+    text-align: center;
+    border: none;
+    background: none;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+    width: 300px;
+    box-sizing: border-box;
+}
+
+header input:focus {
+    outline: none;
+}
+
+/* Botões */
+button {
+    padding: 20px 40px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    margin-left: 20px;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Layout Principal */
+main {
+    display: flex;
+    flex: 1;
+}
+
+/* Seção de Miniaturas de Páginas */
+#page-thumbnails {
+    width: 240px;
+    border-right: 1px solid #ddd;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+    box-sizing: border-box;
+    overflow-y: auto; /* Adiciona rolagem vertical se necessário */
+}
+
+#page-thumbnails h2 {
+    font-size: 18px;
+    margin: 0 0 10px;
+}
+
+#thumbnails-list {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+/* Miniatura de Página */
+.thumbnail {
+    width: 150px;
+    height: 200px;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative; /* Necessário para posicionar o botão "X" corretamente */
+}
+
+.thumbnail span {
+    font-size: 14px;
+    text-align: center;
+    color: #333;
+}
+
+/* Botão de Exclusão da Miniatura */
+.thumbnail .delete-button {
+    position: absolute; /* Posiciona o botão "X" no canto inferior direito */
+    top: 5px;
+    right: 5px;
+    width: 20px; /* Ajustado para tamanho visível */
+    height: 20px; /* Ajustado para tamanho visível */
+    background-color: #ccc;
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 14px;
+    line-height: 20px; /* Centraliza verticalmente o "X" */
+    text-align: center; /* Centraliza horizontalmente o "X" */
+}
+
+.thumbnail .delete-button:hover {
+    background-color: rgb(126, 38, 38); /* Muda a cor para vermelho quando o cursor está sobre o botão */
+}
+
+/* Editor de Texto */
+#editor-container {
+    flex: 1;
+    padding: 90px;
+    box-sizing: border-box;
+    overflow: auto;
+    min-height: 100vh; /* Ajuste a altura mínima para o editor */
+}
+
+#editor {
+    width: 100%;
+    height: 100%; /* Faz o editor ocupar toda a altura do container */
+}
+
+/* Controles da Página */
+#page-controls {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
